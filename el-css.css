@@ -24,7 +24,6 @@ h2{
 	padding-bottom: 1em;
 }
 
-
 h3{
 	font-size: 1.2rem;
 	color: rgba(255, 255, 255, 0.87); 
@@ -32,9 +31,14 @@ h3{
 	padding-bottom: 1em;
 }
 
+img {
+	width: 100%;
+	filter: brightness(.8) contrast(1.2);
+	box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.14), 0px 6px 30px rgba(0, 0, 0, 0.12), 0px 8px 10px rgba(0, 0, 0, 0.2);
+}
+
 .label--hightligthed{
 	color: #BB86FC; }
-
 
 .material-icons.md-18 { font-size: 18px; }
 .material-icons.md-24 { font-size: 24px; }
@@ -63,7 +67,7 @@ h3{
 	display: flex;
 	flex-flow: column wrap;
 	width:17em; 
-
+	min-width: 13em;
 	/* Elevation Overlay / 16dp */
 	background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), #121212;
 	box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.14), 0px 6px 30px rgba(0, 0, 0, 0.12), 0px 8px 10px rgba(0, 0, 0, 0.2);	}
@@ -129,4 +133,9 @@ ul.nav {
 	display: block;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.6);
 	padding-bottom: 1em;
+}
+
+.banner{
+	width: 100%;
+	height: auto;
 }
