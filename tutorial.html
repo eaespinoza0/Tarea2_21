@@ -8,7 +8,7 @@
 	<body>
 		<div class="content">
 			<div>
-			<h1>IPC1 Tarea 1</h1>
+			<h1>IPC1 Tarea 2</h1>
 			<h3>Erik Espinoza - 200516297</h3>
 			</div>
 			<div class="content__main content--sidebar">
@@ -45,7 +45,7 @@
 					</li>
 				</ul>
 				<div class="content__body">
-					<div class="text_block">
+					<div class="text-block">
 						<h2 class="label--hightligthed">Tutorial</h2>
 						El siguiente tutorial demostrara como definir una clase  y luego instanciarla en un objeto.<br/><br/>
 
@@ -72,64 +72,64 @@
 						</p>
 					</div>
 
-					<div class="text_block">
+					<div class="text-block">
 						<div class="callout">
 							<h3>Definicion de la clase</h3>
 							<p>
-								<code>
-									public class Persona{<br>
-									&nbsp;&nbsp;String nombre;<br>
-									&nbsp;&nbsp;int edad;<br>
-									&nbsp;&nbsp;int diasVida;<br>
-									&nbsp;&nbsp;String estado;<br>
-									<br>
-									&nbsp;&nbsp;public Persona(edad){<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;this.edad = edad;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;this.diasVida = this.edad * 365;<br/>
-									&nbsp;&nbsp;}<br/>
-									<br/>
-									&nbsp;&nbsp;void dormir(){<br>
-									&nbsp;&nbsp;&nbsp;&nbsp;this.estado = 'No molestar';<br>
-									&nbsp;&nbsp;}<br>
-									<br>
-									&nbsp;&nbsp;void despertar(){<br>
-									&nbsp;&nbsp;&nbsp;&nbsp;this.estado = 'Necesita cafe';<br>
-									&nbsp;}<br>
-									<br>
-									&nbsp;&nbsp;void trabajar(){<br>
-									&nbsp;&nbsp;&nbsp;&nbsp;this.estado = 'Necesita dormir';<br>
-									&nbsp;&nbsp;}<br>
-									<br>
-									&nbsp;&nbsp;void vivirDia(){<br>
-									&nbsp;&nbsp;&nbsp;&nbsp;this.despertar();<br>
-									&nbsp;&nbsp;&nbsp;&nbsp;this.trabajar();<br>
-									&nbsp;&nbsp;&nbsp;&nbsp;this.dormir();<br>
-									&nbsp;&nbsp;&nbsp;&nbsp;this.diasVida++;<br>
-									&nbsp;&nbsp;}<br>
-									<br>
-									&nbsp;&nbsp;void obtenerEstado(){<br>
-									&nbsp;&nbsp;&nbsp;&nbsp;return this.estado;<br>
-									&nbsp;&nbsp;}<br>
-									}<br>
-								</code>
+<pre>
+	<code class="code-editor">
+<span class="code-editor__keyword">public</span> <span class="code-editor__keyword">class</span> <span class="code-editor__data-type">Persona</span>{
+	<span class="code-editor__data-type">String</span> <span class="code-editor__var">nombre</span>
+	<span class="code-editor__data-type">int</span> <span class="code-editor__var">edad</span>
+	<span class="code-editor__data-type">int</span> <span class="code-editor__var">diasVida</span>
+	<span class="code-editor__data-type">String</span> <span class="code-editor__var">estado</span>;
+
+	<span class="code-editor__keyword">public</span> <span class="code-editor__method">Persona</span>(<span class="code-editor__var">edad</span>){
+		<span class="code-editor__keyword">this.</span><span class="code-editor__var">edad</span> = <span class="code-editor__var">edad</span>;
+		<span class="code-editor__keyword">this.</span><span class="code-editor__var">diasVida</span> = <span class="code-editor__keyword">this.</span><span class="code-editor__var">edad</span> * <span class="code-editor__data-type__int">365</span>;
+	}
+
+	<span class="code-editor__keyword">private</span> <span class="code-editor__data-type">void</span> <span class="code-editor__method">dormir</span>(){
+		<span class="code-editor__keyword">this.</span><span class="code-editor__var">estado</span> = <span class="code-editor__data-type__string">'No molestar'</span>;
+	}
+
+	<span class="code-editor__keyword">private</span> <span class="code-editor__data-type">void</span> <span class="code-editor__method">despertar</span>(){
+		<span class="code-editor__keyword">this.</span><span class="code-editor__var">estado</span> = <span class="code-editor__data-type__string">'Necesita cafe'</span>;
+	}
+
+	<span class="code-editor__keyword">private</span> <span class="code-editor__data-type">void</span>  <span class="code-editor__method">trabajar</span>(){
+		<span class="code-editor__keyword">this.</span><span class="code-editor__var">estado</span> = <span class="code-editor__data-type__string">'Necesita dormir'</span>;
+	}
+
+	<span class="code-editor__keyword">public</span> <span class="code-editor__data-type">void</span>  <span class="code-editor__method">vivirDia</span>(){
+		<span class="code-editor__keyword">this.</span><span class="code-editor__method">despertar</span>();
+		<span class="code-editor__keyword">this.</span><span class="code-editor__method">trabajar</span>();
+		<span class="code-editor__keyword">this.</span><span class="code-editor__method">dormir</span>();
+		<span class="code-editor__keyword">this.</span><span class="code-editor__var">diasVida</span>++;
+	}
+
+	<span class="code-editor__keyword">public</span> <span class="code-editor__data-type">void</span> <span class="code-editor__method">obtenerEstado</span>(){
+		<span class="code-editor__return">return</span> <span class="code-editor__keyword">this.</span><span class="code-editor__var">estado</span>;
+	}
+}
+	</code>
+</pre>
 							</p>
 						</div>
 					</div>
 
-					<div class="text_block">
+					<div class="text-block">
 						<div class="callout">
 							<h3>Instanciar la clase</h3>
-							<p>
-								Una vez definida la case se puede realizar la instanciacion de la misma de la siguiente forma:<br/><br/>
+	<pre>
+		<code class="code-editor">
+<span class="code-editor__data-type">Persona</span> <span class="code-editor__var">erik</span> = <span class="code-editor__keyword">new</span> <span class="code-editor__data-type">Persona</span>(<span class="code-editor__data-type__int">33</span>);
 
-								<code>
-									Persona erik = new Persona(33);<br/>
-									<br/>
-									erik.vivirDia();<br/>
-									System.out.println(erik.obtenerEstado());<br/>
-									// salida: 'No molestar'
-								</code>
-							</p>
+<span class="code-editor__var">erik.</span><span class="code-editor__method">vivirDia</span>();
+<span class="code-editor__var">System.out.</span><span class="code-editor__method">println</span>(<span class="code-editor__var">erik.</span><span class="code-editor__method">obtenerEstado</span>());
+<span class="code-editor__comment">// salida: 'No molestar'</span>
+		</code>
+	</pre>
 						</div>
 					</div>
 				</div>
